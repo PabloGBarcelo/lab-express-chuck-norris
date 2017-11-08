@@ -1,3 +1,6 @@
   <body>
     <h1>Categories</h1>
+    <% for (i=0; i< categoriesValue.length ; i++) { %>
+    <p><a href="/categories?cat=<%= categoriesValue[i] %>"><%= categoriesValue[i] %></a></p>
+    <% } %>
   </body>
