@@ -31,18 +31,11 @@ app.get('/categories', (request, response, next) => {
 } else {
   client.getRandomJoke(cat).then(dataResponse => {
     console.log(dataResponse);
-    data.jokeByCategory = dataResponse;
+    data.jokeByCategory = dataResponse.value;
     response.render('joke-by-category',data);
     next();
   });
 }
-});
-
-app.get('/joke-by-category', (request, response, next) => {
-  let cat = request.query.cat;
-  console.log(cat);
-
-
 });
 
 // Server Started
