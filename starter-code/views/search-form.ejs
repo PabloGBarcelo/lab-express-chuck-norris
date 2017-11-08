@@ -1,0 +1,11 @@
+<!-- Simple form which will send a POST request -->
+<form action="/search" method="post">
+  <label for="searchTerm">Texto a buscar:</label>
+  <input id="searchTerm" type="text" name="toSearch">
+  <input type="submit" value="SEARCH!">
+</form>
+<p> <%= searchValue %> </p>
+
+<a href="/search">[ SEARCH ]</a>
+<a href="/categories">[ CATEGORIES ]</a>
+<a href="/random">[ RANDOM ]</a>
